@@ -37,42 +37,49 @@ while val != "q":
         )
     val = input("välj ett av alternativen")
 
+#-------Addition-------
     if val == "1":
         tal1 = float((input("skriv in det första talet")))
         tal2 = float((input("skriv in det andra talet")))
         summa = addition(tal1,tal2)
         print(f"summan är {summa}")
 
+#-------Subtraktion-------
     if val == "2":
         tal1 = float((input("skriv in det första talet")))
         tal2 = float((input("skriv in det andra talet")))
         differens = subtraktion(tal1,tal2)
         print(f"differensen är {differens}")
 
+#-------Multiplikation-------
     if val == "3":
         tal1 = float((input("skriv in det första talet")))
         tal2 = float((input("skriv in det andra talet")))
         produkt = multiplikation(tal1,tal2)
         print(f"produkten är {produkt}")
 
+#-------Division-------
     if val == "4":
         tal1 = float((input("skriv in det första talet")))
         tal2 = float((input("skriv in det andra talet")))
         kvot = division(tal1,tal2)
         print(f"kvoten är {kvot}")
 
+#-------Upphöjt-------
     if val == "5":
         tal1 = float((input("skriv in det första talet")))
         tal2 = float((input("skriv in det andra talet")))
         potens = upphöjt(tal1,tal2)
         print(f"potensen är {potens}")
-
+        
+#-------Heltalsdivision-------
     if val == "6":
         tal1 = float((input("skriv in det första talet")))
         tal2 = float((input("skriv in det andra talet")))
         heltalskvot = heltalsdivision(tal1,tal2)
         print(f"heltalskvoten är {heltalskvot}")
 
+#-------Avsluta-------
     if val == 'q':
         print("programmet avslutas.......")
         break
