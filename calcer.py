@@ -21,47 +21,58 @@ def heltalsdivision (a,b):
     return a//b
 
 
+#--------- Huvudprogram ---------
 
-while True:
-    operator = input("välj ett räknesätt: + - * / ** //, eller q för att avsluta")
+val = ""
+while val != "q":
+    print(
+        """
+            Välkommen till miniräknaren!
+            1. Addera           2. Subtrahera
+            3. Multiplicera     4. Dividera
+            5. Upphöjt          6. Heltalsdivision
+            q. Avsluta
+        """
+        )
+    val = input("välj ett av alternativen")
 
-    if operator == "+":
-        tal1 = float(int(input("skriv in det första talet")))
-        tal2 = float(int(input("skriv in det andra talet")))
+    if val == "1":
+        tal1 = float((input("skriv in det första talet")))
+        tal2 = float((input("skriv in det andra talet")))
         summa = addition(tal1,tal2)
-        print(summa)
+        print(f"summan är {summa}")
 
-    if operator == "-":
-        tal1 = float(int(input("skriv in det första talet")))
-        tal2 = float(int(input("skriv in det andra talet")))
+    if val == "2":
+        tal1 = float((input("skriv in det första talet")))
+        tal2 = float((input("skriv in det andra talet")))
         differens = subtraktion(tal1,tal2)
-        print(differens)
+        print(f"differensen är {differens}")
 
-    if operator == "*":
-        tal1 = float(int(input("skriv in det första talet")))
-        tal2 = float(int(input("skriv in det andra talet")))
+    if val == "3":
+        tal1 = float((input("skriv in det första talet")))
+        tal2 = float((input("skriv in det andra talet")))
         produkt = multiplikation(tal1,tal2)
-        print(produkt)
+        print(f"produkten är {produkt}")
 
-    if operator == "/":
-        tal1 = float(int(input("skriv in det första talet")))
-        tal2 = float(int(input("skriv in det andra talet")))
+    if val == "4":
+        tal1 = float((input("skriv in det första talet")))
+        tal2 = float((input("skriv in det andra talet")))
         kvot = division(tal1,tal2)
-        print(kvot)
+        print(f"kvoten är {kvot}")
 
-    if operator == "**":
-        tal1 = float(int(input("skriv in det första talet")))
-        tal2 = float(int(input("skriv in det andra talet")))
+    if val == "5":
+        tal1 = float((input("skriv in det första talet")))
+        tal2 = float((input("skriv in det andra talet")))
         potens = upphöjt(tal1,tal2)
-        print(potens)
-    
-    if operator == "//":
-        tal1 = float(int(input("skriv in det första talet")))
-        tal2 = float(int(input("skriv in det andra talet")))
+        print(f"potensen är {potens}")
+
+    if val == "6":
+        tal1 = float((input("skriv in det första talet")))
+        tal2 = float((input("skriv in det andra talet")))
         heltalskvot = heltalsdivision(tal1,tal2)
-        print(heltalskvot)
-    
-    if operator == 'q':
+        print(f"heltalskvoten är {heltalskvot}")
+
+    if val == 'q':
         print("programmet avslutas.......")
         break
 
