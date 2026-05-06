@@ -10,9 +10,10 @@ def multiplikation(a,b):
 def division(a,b):
     try:
         resultat = a / b
-        print(resultat)
+        return resultat
     except ZeroDivisionError:
         print("du kan inte dividera med 0. använd ett annat tal")
+        return "ogiltig"
 
 def upphöjt(a,b):
     return a**b
