@@ -14,9 +14,16 @@ def division(a,b):
     except ZeroDivisionError:
         print("du kan inte dividera med 0. använd ett annat tal")
 
+def upphöjt(a,b):
+    return a**b
+
+def heltalsdivision (a,b):
+    return a//b
+
+
 
 while True:
-    operator = input("välj ett räknesätt: + - * /, eller q för att avsluta")
+    operator = input("välj ett räknesätt: + - * / ** //, eller q för att avsluta")
 
     if operator == "+":
         tal1 = float(int(input("skriv in det första talet")))
@@ -40,7 +47,19 @@ while True:
         tal1 = float(int(input("skriv in det första talet")))
         tal2 = float(int(input("skriv in det andra talet")))
         kvot = division(tal1,tal2)
-        print (kvot)
+        print(kvot)
+
+    if operator == "**":
+        tal1 = float(int(input("skriv in det första talet")))
+        tal2 = float(int(input("skriv in det andra talet")))
+        potens = upphöjt(tal1,tal2)
+        print(potens)
+    
+    if operator == "//":
+        tal1 = float(int(input("skriv in det första talet")))
+        tal2 = float(int(input("skriv in det andra talet")))
+        heltalskvot = heltalsdivision(tal1,tal2)
+        print(heltalskvot)
     
     if operator == 'q':
         print("programmet avslutas.......")
